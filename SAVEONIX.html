@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SAVEONIX | Smart Energy Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #e63946;
+      font-weight: 600;
+      font-size: 16px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    section h2 {
+      font-size: 36px;
+      color: #e63946;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .welcome img {
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "✅ ";
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="saveonix.png" alt="SAVEONIX Logo" />
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('about')">About Us</a>
+      <a onclick="showSection('product')">Product</a>
+      <a onclick="showSection('contact')">Contact</a>
+    </nav>
+  </header>
+
+  <section class="welcome active" id="home">
+    <img src="saveonix.png" alt="SAVEONIX Logo" />
+    <h1>Welcome to SAVEONIX</h1>
+    <p>We are on a mission to create smart, automated energy-saving solutions using cutting-edge IoT technology. Our products help you reduce electricity wastage and promote sustainable living — in homes, hostels, and workspaces.</p>
+  </section>
+
+  <section id="about">
+     <img src="saveonix.png" alt="SAVEONIX Logo" />
+    <h2>About Us</h2>
+    <p>
+      SAVEONIX is a technology-driven startup born from the vision of engineering students aiming to make a social and environmental impact. We believe in combining innovation with responsibility — our solutions are designed to be energy-efficient, cost-effective, and user-friendly. Our journey began with a simple idea: to stop energy from being wasted unknowingly.
+      <br><br>
+      Today, we are building smart systems that automatically manage power consumption in daily environments, helping individuals and institutions save electricity effortlessly.
+    </p>
+  </section>
+
+  <section id="product">
+     <img src="smartplug.png" alt="Smart Plug Logo">
+  <h2>Our Product</h2>
+  <p>
+    Our flagship product — the <strong>SAVEONIX Smart Plug</strong> — is an intelligent device that monitors and controls electrical appliances automatically. Equipped with sensors and connectivity features, it:
+  </p>
+  <ul style="text-align: left; display: inline-block; margin-top: 20px;">
+    <li>Detects human presence to turn off unused devices.</li>
+    <li>Sends notifications and usage data to your phone.</li>
+    <li>Works with existing plugs and switches — no rewiring needed.</li>
+    <li>Helps reduce your monthly electricity bills.</li>
+  </ul>
+  <p style="margin-top: 20px;">
+    Simple to use, smart to manage — SAVEONIX Smart Plug is perfect for homes, hostels, offices, and more.
+  </p>
+
+  <a href="https://wa.me/9392335063?text=Hi%20SAVEONIX%2C%20I%20want%20to%20buy%20the%20Smart%20Plug!" target="_blank" style="display:inline-block; margin-top:30px; padding:12px 25px; background-color:#e63946; color:white; font-weight:bold; border-radius:8px; text-decoration:none; font-size:16px;">
+    🛒 Buy Now
+  </a>
+</section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>
+      We'd love to hear from you! Whether you’re a user, collaborator, or curious about our work — feel free to reach out.
+      <br><br>
+      📧 Email: <a href="saveonix.support@gmail.com">saveonix.support@gmail.com
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 SAVEONIX. All rights reserved.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => {
+        if (section.id === id) {
+          section.classList.add("active");
+        } else {
+          section.classList.remove("active");
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
